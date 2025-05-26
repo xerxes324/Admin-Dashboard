@@ -15,19 +15,19 @@ body, html
 {
     height:100%;
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 4fr;
-    background-color: blue;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 3.8fr;
+    background-color: aliceblue;
 }
 
 .sidebar
 {
+    box-shadow: inset 0.6em 0em gold;
     display: grid;
     grid-column: 1/2;
     grid-row: 1/4;
-    background-color: pink;
+    background-color:rgb(80, 181, 194);
     text-align: center;
-    border: 2px solid black;
     grid-template-rows: 3fr 8fr 4fr 6fr ;
     
 }
@@ -35,7 +35,6 @@ body, html
 {
     align-content: center;
     font-size: larger;
-    background-color: aqua;
     padding-left: 50px;
 }
 
@@ -43,7 +42,6 @@ body, html
 {
     align-items: center;
     display: grid;
-    background-color: aqua;
     grid-template-rows: repeat(auto-fill,minmax(50px,1fr));
 }
 
@@ -58,34 +56,351 @@ body, html
 .emptyspace
 {
     grid-row: 4/5;
-    background-color: aliceblue;
 }
+
+.menuitems, .dashboard
+{
+    display:grid;
+    grid-auto-flow: column;
+    justify-content: left;
+    padding-left: 30px;
+    align-items: center;
+    height:100%;
+    gap:5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dashboard
+{
+    gap: 15px;
+    font-size: 30px;
+
+}
+
+.dashboard svg
+{
+    width: 50px;
+    height:50px;
+}
+
+svg
+{
+    width:30px;
+    height:40px;
+}
+
+.header
+{
+    display: grid;
+    grid-template-rows: 1fr 1.35fr;
+    background-color:rgb(255, 255, 255);
+    box-shadow: inset 0px -3px 5px 0px black;
+}
+
+.headertop
+{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.headertop-left, .headertop-right
+{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headertop-left
+{
+    /* background-color: pink; */
+    column-gap: 2%;
+    justify-content: start;
+    padding-left: 30px;
+}
+
+.headertop-right
+{
+    /* background-color: green; */
+    justify-content: end;
+    padding-right: 40px;
+
+}
+input
+{
+    border-radius: 10px;
+    width:700px;
+    background-color: rgb(229, 226, 226);
+}
+
+.headeritem img
+{
+    width:30px;
+}
+
+#notif
+{
+    margin-right: 30px;
+}
+
+#profilepic1
+{
+    border:2px solid yellow;
+    border-radius: 50%;
+    padding:2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#profilepic1 img
+{
+    margin-top: 5px;
+    margin-left: 3px;
+    width:30px;
+}
+
+#username
+{
+    font-size: 10px;
+}
+
+
+.headerbottom
+{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
+}
+.headerbottom-left
+{
+    /* background-color: rgb(162, 173, 78); */
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 3fr;
+}
+
+#headerbottom-left-left
+{
+    align-content: center;
+    justify-items: center;
+    margin-left: 20px;
+}
+
+#headerbottom-left-right
+{
+    /* background-color: bisque; */
+    display: grid;
+    grid-template-rows: 1fr 1.25fr;
+    gap:0px;
+}
+
+#profilepic2
+{
+    width : 80px;
+    height : 75px;
+    border:2px solid yellow;
+    border-radius: 50%;
+    margin-bottom: 2px;
+} 
+
+#profilepic2 img
+{
+    width:88px;
+}
+
+#p1
+{
+    margin-top: 20px;
+    font-size: large;
+    
+}
+
+#p2
+{
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 550;
+}
+
+.headerbottom-right
+{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+} 
+
+.new , .upload, .share
+{
+    justify-items: center;
+    align-content: center;
+    border: 2px solid black;
+    margin:25px;
+    width:75%;
+    border-radius: 15px;
+    background-color:powderblue;
+}
+
+/* MAIN CONTENT : */
 
 
 .maincontent
 {
     display: grid;
+    grid-template-columns: 3.5fr 1fr;
     grid-column: 2/3;
     grid-row: 2/4;
-    background-color: red;
     grid-template-rows: repeat(auto-fill,minmax(500px,1fr));
+    background-color: rgb(229, 226, 226);
 }
 
-.dashboard
+.maincontent-left
 {
-    grid-row: 1/2;
-    background-color: peachpuff;
+    display: grid;
+    grid-template-rows: 2fr 7fr 2fr;    
 }
 
-.icon
+.maincontent-left-heading
 {
-    scale: 0.1 ;
+    align-content: center;
+    justify-items: left;
+    padding-left: 35px;
+    font-size: 22px;
+    font-weight:bold;
 }
 
-.menuitems
+.projects
 {
-    outline: 2px solid black;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    column-gap: 1fr;
+}
+
+.proj
+{
+    box-shadow: inset 0.45em 0em gold,6px 6px 5px black;
+    background-color: powderblue;
+    margin:10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15px;
+    border-radius: 8px;
+    display:grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.proj-title
+{
+    font-weight: 550;
+    margin-top: 20px;
+    text-align: center;
+    font-size: larger;
+}
+
+.proj-info
+{
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    font-size: 18px;
+
+}
+
+.icons
+{
+    display:grid;
+    grid-auto-flow: column;
+    grid-template-columns: 10fr 1fr 1fr 1fr;
+}
+.maincontent-right
+{
+    display: grid;
+    grid-template-rows: 1fr 7fr 1fr 7fr 1fr;
+    margin: 10px;
+}
+
+
+.announcements , .trending
+{
+    border-radius: 10px;
+    padding-top: 10px;
+    background-color: powderblue;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-bottom: 5px;
+    box-shadow: 5px 4px 3px black;
+    margin:10px;
+}
+
+.announcements-title
+{
+    color:black;
+    font-weight: 600;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+.announcements-info
+{
+    padding-left: 15px;
+    padding-right: 5px;
+    font-size: 15px;
+}
+
+.maincontent-right-trending , .maincontent-right-announcements
+{
+    align-content: center;
+    /* background-color: azure; */
+    padding-left: 10px;
+    font-size: large;
+    font-weight: 550;
+}
+
+
+.trending
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: wheat;
+}
+
+.trending_1,.trending_2, .trending_3, .trending_4
+{
+    display:grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 3fr;
+}
+
+.trending_celeb
+{
+    text-align: justify;
+    display: grid;
+    grid-template-rows:1fr 1fr;
+}
+
+.celeb_top
+{
+    font-size: large;
+}
+
+.celeb_bottom
+{
+    font-size: small;
+}
+
+.trending_logo
+{
+    padding-left: 60%;
+    
+}
+
+
+#svgline
+{
+
+    width:80%;
+    padding-left: 20px;
+    overflow: hidden;
 }
